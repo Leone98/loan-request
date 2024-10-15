@@ -1,0 +1,52 @@
+{
+  "name": "loan-request",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"json-server --watch db.json --port 3333\"",
+    "test": "node -e \"require('fs').writeFileSync('package.json', JSON.stringify({...require('./package.json'), type: 'commonjs'}, null, 2))\" && jest && node -e \"require('fs').writeFileSync('package.json', JSON.stringify({...require('./package.json'), type: 'module'}, null, 2))\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/preset-react": "^7.25.7",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "axios": "^1.7.7",
+    "babel-jest": "^29.7.0",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "esm": "^3.2.25",
+    "fs": "^0.0.1-security",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "json-server": "^1.0.0-beta.3",
+    "msw": "^2.4.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-input-mask": "^2.0.4",
+    "react-router-dom": "^6.26.2",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8"
+  }
+}
